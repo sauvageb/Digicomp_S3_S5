@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>The Power of Css Classes</title>
+</head>
+<body>
+
+<section class="rounded border-dotted">
+    <h1>The Power of Css Classes</h1>
+    <div class="element bg-orange circle"></div>
+    <div class="element bg-pink rounded shadow-inner-outer"></div>
+    <div class="element bg-olive border-dotted"></div>
+    <div class="element bg-yellow rounded shadow-inner rotated"></div>
+    <div class="element bg-blue circle border-solid" ></div>
+    <div class="element bg-red shadow-outer rotated"></div>
+  </section>
+  
+  <script>
+    fetch('https://api.openweathermap.org/data/2.5/forecast?lat=47.0&lon=5.40&appid=abef135b647329e43c861ceaa35aaed9')
+      .then(response => response.json())
+      .then(data => console.log(data))
+  </script>
+
+</body>
+</html>

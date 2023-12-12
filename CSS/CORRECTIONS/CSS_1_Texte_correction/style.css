@@ -1,0 +1,53 @@
+/* reproduire comme sur l'image de reference apercu.png
+
+/* couleurs : 
+gris - #868e96
+bleu - #007bff
+jaune - #ffc107
+rouge - #dc3545
+*/
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #505050;
+}
+h1 {
+  font-size: 96px;
+  line-height: 1;
+}
+
+.intro {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: justify;
+  color: #007bff;
+}
+
+.dark {
+  font-weight: bold;
+  color: black;
+}
+
+.righty {
+  text-align: right;
+}
+
+.egg {
+  background: #ffc107;
+  padding: 24px;
+}
+
+.alert {
+  color: #dc3545;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 3px solid;
+  padding: 24px
+}
+
+footer {
+  padding: 24px;
+  background: #505050;
+  color: white;
+  text-align: center;
+}

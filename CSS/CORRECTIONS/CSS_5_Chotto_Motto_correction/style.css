@@ -1,0 +1,94 @@
+/*
+Vous commencez votre carrière en tant qu'intégrateur web. Votre premier client est un renommé chef japonnais Daichi Sakamoto.
+Son designer japonais a prépare pour vous une maquette minimaliste, aérée et très lisible 
+vous pouvez voir son prototype en action ici 
+
+- La police utilisée ici - Changa - c'est une police google fonts à charger dans la balise <head>
+- La référence de la couleur jaune - #fee500
+*/
+
+/* image de référence :  apercu.png */
+
+:root {
+    --brand: #fee500;
+}
+
+/* ajouter une bordure jaune autour du body 24px  */
+/* changer la police pour Changa, laisser le sans-serif comme le 2e choix */
+/* augmente la taille de police au 20px, l'interligne de 1.8 */
+body {
+    font-family: Changa, sans-serif;
+    line-height: 1.8;
+    font-size: 1.25rem;
+    margin: 0;
+    border: 1.5rem solid var(--brand);
+    padding: 2rem 0;
+    color: #212121;
+    box-sizing: border-box;
+}
+
+/* le block contenu est centré ne dépasse pas la largeur de 720px */
+main {
+    margin: 0 auto;
+    max-width: 720px;
+    width: 90%;
+}
+
+
+/* les images ne dépassent pas l'écran */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-intro {
+    box-shadow: 10px 10px var(--brand);
+}
+
+
+/* centrer les éléments de la partie header */
+header,
+h2,
+footer {
+    text-align: center;
+}
+
+
+/* taille de police plus grande (32px) dans le paragraphe intro, centré */
+.intro {
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+/* la liste sans bullets */
+/* pas de marge ni de padding */
+nav ul {
+    list-style: none;
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+/* les éléments de la liste affichés dans une ligne */
+nav li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* les liens dans la partie navigation en majuscules, couleur noir */
+/* espacés de 12px */
+nav a {
+    padding: .25rem .75rem;
+    transition: .5s;
+    background: var(--brand);
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* le lien dans la partie navigation en survol devient jaune  */
+nav a:hover {
+    background: #212121;
+    color: #fff;
+}

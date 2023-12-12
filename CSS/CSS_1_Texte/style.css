@@ -1,0 +1,38 @@
+/* reproduire comme sur l'image de reference apercu.png
+
+blanc - #fff ou white
+noir - #000 ou black
+bleu - #007bff
+jaune - #ffc107
+rouge - #dc3545
+gris - #505050
+
+Propriétés à utiliser :
+color
+border
+background-color
+padding
+font-weight
+font-size
+letter-spacing
+text-align
+text-transform
+vous pouvez trouver des exemples sur https://cssreference.io
+*/
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #505050;
+  }
+  h1 {
+    line-height: 1;
+    font-size: 96px;
+  }
+  
+  .intro {
+  }
+  
+  
+  
+  
+  

@@ -1,0 +1,53 @@
+/* --- COLORS --- */
+
+.bg-red {
+  background-color: crimson;
+}
+.bg-orange {
+  background-color: darkorange; 
+}
+.bg-pink {
+  background-color: palevioletred; 
+}
+.bg-yellow {
+  background-color: gold; 
+}
+.bg-olive {
+  background-color: olive; 
+}
+.bg-blue {
+  background-color: dodgerblue;
+}
+
+/* --- FORMS ---- */
+.rounded {
+  border-radius: 20px;
+}
+.circle {
+  border-radius: 50%;
+}
+
+/* --- BORDERS ---- */
+.border-solid {
+  border: 3px solid;
+}
+.border-dotted {
+  border: 3px dotted;
+}
+
+/* --- TRANSFORMS --- */
+.rotated {
+  transform: rotate(45deg);
+}
+
+/* --- SHADOWS --- */
+.shadow-outer {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, .5);
+}
+.shadow-inner {
+  box-shadow: inset 6px 4px 5px black;
+}
+.shadow-inner-outer {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, .5), inset 6px 4px 5px black;
+}
+

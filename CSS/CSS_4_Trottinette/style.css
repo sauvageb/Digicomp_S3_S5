@@ -1,0 +1,61 @@
+/* Completez le CSS ci-dessous pour le rendre conforme à l'image de reference */
+
+/* body centré, 
+largeur maximale de 800px
+police sans-serif de 20px;
+interligne 1.5
+*/
+body {
+
+}
+
+/* titre principal centré, de taille 96px */
+h1 {
+
+}
+
+/* section choice 
+blanc sur le fond #303030, 
+avec une marge interne de 24px */
+.choice {
+
+}
+
+/* paragraphe intro "Pliante ou non, ..."
+police de 24px
+espacement entre les lettres de 2px */
+.intro {
+
+}
+
+/* img 
+centrée, 
+avec une bordure de 2px couleur tomato
+une ombre 4px 4px 0 tomato
+marge interne de 10px */
+img {
+
+}
+
+/* section details :
+marge interne de 24px
+bordure et ombre comme image;
+marges top de 24px
+marge bottom de 24px
+*/
+.details {
+
+}
+/* élément a 
+avec une marge interne de 16px,
+blanc sur fond tomato,
+pas souligné */
+.button {
+
+}
+
+/* fond #303030 en survol */
+.button:hover {
+
+}
+

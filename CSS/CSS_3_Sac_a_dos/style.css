@@ -1,0 +1,85 @@
+/* Completez le css ci-dessous pour le rendre conforme à l'image de reference
+
+Les propriétés à utiliser
+text-align
+margin
+padding
+background-color
+color
+text-transform
+letter-spacing
+box-shadow
+*/
+
+body {
+    font-family: Montserrat, sans-serif;
+    max-width: 600px;
+    margin: 0 auto 24px;
+  }
+  
+  /* Le titre principal (Autour d'un sac à dos) 
+  centré, 
+  marge basse 0 
+  */
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  /* Le sous-titre ("Tout ce que vous devez savoir") 
+  en majuscules
+  pas gras
+  centré
+  taille de police de 14px
+  espacement des lettres 2px
+  marge haute 0 
+  */
+  .subtitle {
+  }
+  
+  /* Le premier paragraphe (celui qui a la classe intro ) 
+  en taille plus grande 20px 
+  color de texte - crimson
+  */
+  
+  .intro {
+  }
+  
+  /* titres des sections 
+  en majuscules
+  marge haute 0 
+  */
+  
+  section h2 {
+  }
+  
+  /* la liste à puce 
+  couleur de texte crimson */
+  
+  ul {
+  }
+  
+  /* la sous-liste (stylo et notebook, médicaments ) 
+  symbols "carré"
+  */
+  li ul {
+  }
+  
+  /* la dernière section (celle avec la classe top-5 )
+  padding de 24px
+  bordure 1px solid crimson
+  une ombre portée de 6px 6px 0 crimson
+  */
+  
+  .. {
+  }
+  
+  /* "trace me" 
+  couleur de fond - crimson
+  couleur de texte - blanc
+  padding à droite 3px 
+  */
+  
+  .. {
+  }
+  

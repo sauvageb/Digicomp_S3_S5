@@ -1,0 +1,132 @@
+/* 
+- couleur bleu Alyra -  #0075ba 
+
+- image café - https://images.unsplash.com/photo-1588064549181-755cf87668ab?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ
+
+- Police Montserrat 400,400i,700 (google fonts)
+
+- Image de référence : apercu.png
+*/
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --brand: #0075ba;
+  }
+  html {
+    font-family: Montserrat, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #121212;
+  }
+  body {
+    line-height: 1.6;
+  }
+  a {
+    color: var(--brand);
+  }
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  p a:hover {
+    background: transparent;
+    color: var(--brand);
+    text-decoration: none;
+  }
+  h1,
+  h2 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h1 {
+    color: var(--brand);
+    line-height: 1;
+  }
+  main h2 {
+    margin: 0;
+    transform: translate(-30px) rotate(-4deg);
+    background: var(--brand);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    line-height: 1;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .logo {
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+    padding: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  }
+  .icon-link {
+    transition: 0.6s;
+    display: block;
+    color: white;
+  }
+  .icon-link:hover {
+    transform: scale(1.3);
+  }
+  .site-title {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  .site-subtitle {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .page-header {
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  .page-header,
+  .about {
+    width: 600px;
+    max-width: calc(100% - 48px);
+    margin: 48px auto;
+  }
+  
+  .contact {
+    padding: 48px 24px;
+    text-align: center;
+    color: #fff;
+    background: var(--brand);
+  }
+  blockquote {
+    margin: 0;
+    padding: 4.5rem 0;
+    text-align: center;
+    background-color: var(--brand);
+    background: url(https://images.unsplash.com/photo-1588064549181-755cf87668ab?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    /* background-blend-mode: multiply; */
+  }
+  blockquote strong {
+    display: block;
+  }
+  .page-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-list li {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  

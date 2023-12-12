@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+figure {
+margin:0;
+text-align: initial;
+}
+section {
+  padding: 24px 0 48px;
+  background: #f2f2f2;
+  width: 800px;
+  margin: 48px auto 48px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+}
+.element {
+  width: 80px;
+  height: 80px;
+  background: black;
+  margin: 16px;
+}
