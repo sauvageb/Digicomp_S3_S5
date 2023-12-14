@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Découvrir l'espace</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"
+        defer></script>
+</head>
+
+
+<body id="etoiles" class="bg-dark text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+          <div class="left-side d-flex align-items-center">
+            <img src="images/ri_eye-2-fill.svg" class="me-2" alt="Bootstrap" width="28" height="28">
+            <a class="navbar-brand me-4 text-white" href="index.html">Découvrir l'espace</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="galerie.html">Galerie photo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Articles
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item" href="galaxies.html">Galaxies</a></li>
+                  <li><a class="dropdown-item text-white" href="nebuleuses.html">Nébuleuses</a></li>
+                  <li><a class="dropdown-item text-white" href="etoiles.html">Etoiles</a></li>
+                  <li><a class="dropdown-item text-white" href="planetes.html">Planètes</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+              <button type="submit" class="btn btn-secondary">Rechercher</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container article-content">
+        <div class="row">
+            <div class="col">
+                <h2 class="my-5 text-center text-white">Les étoiles</h2>
+
+                <img src="images/gallery/etoile_21.jpg" alt="étoiles"
+                    class="article-illustration float-none float-md-end d-block mx-auto mx-md-4 my-1 border-grey">
+
+                <div class="paragraph">
+                    <h3>Qu'est-ce-qu'une étoile ?</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                        hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum. Pellentesque
+                        imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est, vestibulum sed lobortis vel,
+                        euismod id ipsum. Integer tristique dictum rhoncus. Aenean interdum tempor ante. Sed non augue a
+                        risus gravida porta vitae sed libero. Nulla facilisi. Nullam non ullamcorper elit. Pellentesque
+                        ultricies enim sit amet lorem scelerisque venenatis. Donec porta dui eu sem molestie fringilla.
+                        Duis a cursus lacus.</p>
+                    <p>Integer ultricies malesuada lorem eu blandit. Morbi fringilla ultricies consequat. Donec et mi et
+                        orci congue mattis. Integer egestas facilisis sapien, at efficitur arcu pellentesque non.
+                        Quisque id neque et urna faucibus consequat a in turpis. In erat nisl, tempus ut sagittis id,
+                        lobortis ut tortor. Mauris nec sapien urna. Maecenas pretium efficitur dapibus. Praesent
+                        volutpat et lectus ac placerat. Morbi mattis nibh urna, quis commodo dui tincidunt nec. Nullam
+                        euismod enim eget risus cursus, vitae ultricies ipsum rhoncus. Nullam sit amet nisl nec mi
+                        scelerisque eleifend quis eget nisi. Pellentesque vitae mattis mauris. Donec neque nisi, varius
+                        ac velit sit amet, fermentum ullamcorper augue. Vivamus tempus suscipit arcu eu aliquet. Mauris
+                        eu commodo lacus.</p>
+                </div>
+
+                <div class="paragraph">
+                    <h3>Comment se forme une étoile ?</h3>
+                    <p>Donec efficitur faucibus pulvinar. Sed porta, dolor non volutpat laoreet, mi tellus egestas nibh,
+                        a auctor est quam tempor leo. Donec a sapien finibus, gravida odio et, scelerisque nulla.
+                        Vestibulum faucibus malesuada ex quis dignissim. Aliquam ac metus mauris. Nam tincidunt nibh ut
+                        tristique consectetur. Aenean sit amet consectetur quam. Etiam vitae malesuada justo. Aliquam
+                        ultrices tincidunt tellus in vestibulum. Quisque egestas, nisi sed iaculis suscipit, elit velit
+                        lobortis magna, id lobortis dolor magna sit amet metus. Duis rhoncus, ante nec fringilla
+                        gravida, ipsum nisl suscipit libero, at fermentum ante odio sit amet nulla. Pellentesque
+                        consequat consequat maximus. Vivamus euismod purus id lacinia tincidunt.</p>
+                    <p>In id odio accumsan, tincidunt sem sit amet, vehicula nulla. Nulla eleifend urna in nisi egestas,
+                        at posuere est pharetra. Ut at cursus metus, id dignissim orci. Curabitur hendrerit tincidunt
+                        purus, sed mattis metus mattis et. Aenean at mauris feugiat, accumsan quam pellentesque, dapibus
+                        felis. Suspendisse justo lorem, pulvinar a euismod ac, ultrices vel sem. Praesent sagittis
+                        ultrices dui, id ultrices sem elementum id. Praesent eget ex nisl. Vestibulum augue risus,
+                        posuere sed ultrices eu, sollicitudin nec dolor. Praesent eget posuere metus. Vivamus egestas mi
+                        quis felis vulputate, sed iaculis purus dictum. Duis aliquet ex at felis porta, nec vulputate
+                        massa tempus. Suspendisse pretium porttitor velit, sit amet maximus lorem ullamcorper mattis.
+                        Pellentesque ut suscipit velit.</p>
+                    <p>Aenean cursus dignissim ligula, bibendum facilisis magna aliquet a. Nulla commodo sapien mauris,
+                        quis lacinia dolor placerat eu. Nullam sed elementum quam. Vestibulum accumsan sapien ac quam
+                        dictum, et fringilla diam mollis. Vestibulum in maximus leo, eu pulvinar felis. Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Phasellus pretium nulla nec libero consectetur, ut
+                        tincidunt nisl imperdiet. Mauris arcu quam, semper vel enim ac, viverra lacinia orci. Vestibulum
+                        ut condimentum turpis.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Les différents types d'étoiles</h3>
+                <div class="paragraph">
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-4 col-lg-3 order-2 order-md-1">
+                            <img src="images/gallery/etoile_8.jpg" alt="" class="mw-200 d-block mx-auto"
+                                width="100%" height="200px">
+                        </div>
+                        <div class="col-md-8 col-lg-9 order-1 order-md-2">
+                            <h4>Naines brunes</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-8 col-lg-9 order-1 order-md-1">
+                            <h4>Naines rouges</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 order-2 order-md-2">
+                            <img src="images/gallery/etoile_31.png" alt="" class="mw-200 d-block mx-auto" width="100%"
+                                height="200px">
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-4 col-lg-3 order-2 order-md-1">
+                            <img src="images/gallery/etoile_32.jpg" alt="" class="mw-200 d-block mx-auto"
+                                width="100%" height="200px">
+                        </div>
+                        <div class="col-md-8 col-lg-9 order-1 order-md-2">
+                            <h4>Naines jaunes</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-8 col-lg-9 order-1 order-md-1">
+                            <h4>Naines blanches</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 order-2 order-md-2">
+                            <img src="images/gallery/etoile_11.jpg" alt=""
+                                class="mw-200 d-block mx-auto" width="100%" height="200px">
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-12">
+                            <h4>Géantes rouges</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-12">
+                            <h4>Géantes bleues</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-4 col-lg-3 order-2 order-md-1">
+                            <img src="images/gallery/etoile_37.jpg" alt=""
+                                class="mw-200 d-block mx-auto" width="100%" height="200px">
+                        </div>
+                        <div class="col-md-8 col-lg-9 order-1 order-md-2">
+                            <h4>Supergéantes rouges</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-12">
+                            <h4>Naines noires</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-4 col-lg-3 order-2 order-md-1">
+                            <img src="images/gallery/etoile_24.jpg" alt="" class="mw-200 d-block mx-auto"
+                                width="100%" height="200px">
+                        </div>
+                        <div class="col-md-8 col-lg-9 order-1 order-md-2">
+                            <h4>Etoiles à neutrons</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center paragraph">
+                        <div class="col-md-8 col-lg-9 order-1 order-md-1">
+                            <h4>Trous noirs stellaires</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, mauris eu pretium
+                                hendrerit, orci mauris imperdiet lectus, aliquam porttitor libero urna eget ipsum.
+                                Pellentesque imperdiet sem lacinia eros scelerisque fringilla. Nam turpis est,
+                                vestibulum sed lobortis vel, euismod id ipsum. Integer tristique dictum rhoncus. Aenean
+                                interdum tempor ante. Sed non augue a risus gravida porta vitae sed libero. Nulla
+                                facilisi. Nullam non ullamcorper elit. Pellentesque ultricies enim sit amet lorem
+                                scelerisque venenatis. Donec porta dui eu sem molestie fringilla. Duis a cursus lacus.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 order-2 order-md-2">
+                            <img src="images/gallery/etoile_39.jpg" alt=""
+                                class="mw-200 d-block mx-auto" width="100%" height="200px">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg" id="footer">
+        <div class="container">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                @Copyright 2023 - Tous droits réservés
+            </span>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>

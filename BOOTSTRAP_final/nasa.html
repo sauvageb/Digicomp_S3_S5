@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Découvrir l'espace</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body id="accueil" class="bg-dark">
+
+  <nav class="navbar navbar-expand-lg data-bs-theme="dark" sticky-top">
+    <div class="container-fluid">
+      <div class="left-side d-flex align-items-center">
+        <img src="images/ri_eye-2-fill.svg" class="me-2" alt="Bootstrap" width="28" height="28">
+        <a class="navbar-brand me-4 text-white" href="index.html">Découvrir l'espace</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="galerie.html">Galerie photo</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Articles
+            </a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item" href="galaxies.html">Galaxies</a></li>
+              <li><a class="dropdown-item text-white" href="nebuleuses.html">Nébuleuses</a></li>
+              <li><a class="dropdown-item text-white" href="etoiles.html">Etoiles</a></li>
+              <li><a class="dropdown-item text-white" href="planetes.html">Planètes</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+          <button type="submit" class="btn btn-secondary">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <h2 class="mt-5 text-center text-white">NASA - Imagerie</h2>
+
+
+<script>
+const apiKey = 'RPf33GN5Kbw5AcfDAj5YF52YC24ck3Ova6KbdPJF';
+  // Format de date au format YYYY-MM-DD
+const date = '2023-12-14'; // Remplace par la date de ton choix
+
+const apiUrl = `https://api.nasa.gov/planetary/earth/imagery/?lon=0&lat=0&date=${date}&api_key=${apiKey}`;
+
+// Utilisation de fetch pour faire la requête à l'API
+console.log('test');
+fetch(apiUrl)
+  .then(response => {
+    console.log('tt');
+    // Vérifier si la requête a réussi (status code 200)
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP ! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Manipulation des données reçues de l'API
+    console.log(data);
+    // Affiche l'URL de l'image
+    console.log('Image URL:', data.url);
+  })
+  .catch(error => {
+    console.error('Erreur lors de la requête à l\'API:', error);
+  });
+</script>
+
+  <!-- Cards -->
+  <div class="container mt-5 mb-5" id="cards">
+    <div class="row g-5 justify-content-center">
+      <div class="col-12 col-md-5 col-xl-3">
+        <a href="galaxies.html" class="normal-text">
+          <div class="card mx-auto" style="width: 18rem;">
+            <img src="images/gallery/26.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Galaxies</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-5 col-xl-3">
+        <a href="nebuleuses.html" class="normal-text">
+          <div class="card mx-auto" style="width: 18rem;">
+            <img src="images/gallery/16.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Nébuleuses</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-5 col-xl-3">
+        <a href="etoiles.html" class="normal-text">
+          <div class="card mx-auto" style="width: 18rem;">
+            <img src="images/gallery/9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Etoiles</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-5 col-xl-3">
+        <a href="planetes.html" class="normal-text">
+          <div class="card mx-auto" style="width: 18rem;">
+            <img src="images/gallery/36.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Planètes</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="galerie.html" class="button">
+    <button type="button" class="btn d-block mx-auto my-5 text-white">Galerie photo</button>
+  </a>
+
+  <nav class="navbar navbar-expand-lg" id="footer">
+    <div class="container">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link me-4" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        @Copyright 2023 - Tous droits réservés
+      </span>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+
