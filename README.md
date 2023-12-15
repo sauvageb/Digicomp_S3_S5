@@ -1,5 +1,8 @@
 # Sujets abordés ensemble :
-- 
+- HTML5
+- CSS3
+- Javascript, fetch et API Nasa
+- Jakarta EE, Design Pattern MVC
 
 # Lien de sites pour s'entrainer en java :
 
