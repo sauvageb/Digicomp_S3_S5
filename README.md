@@ -4,7 +4,7 @@
 - Javascript, fetch et API Nasa
 - Jakarta EE, Design Pattern MVC
 
-# Lien de sites pour s'entrainer en java :
+# Liens des sites pour s'entrainer :
 
 - MDN (doc html, css, js) (https://developer.mozilla.org/fr/)
 - W3C Validator (https://validator.w3.org)
