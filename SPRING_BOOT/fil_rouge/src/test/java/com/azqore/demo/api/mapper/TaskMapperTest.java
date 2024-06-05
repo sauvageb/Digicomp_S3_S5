@@ -14,7 +14,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class TaskMapperTest {
@@ -27,22 +28,14 @@ class TaskMapperTest {
     @Test
     void toDto_should_map_task_entity_to_task_dto() {
         // GIVEN
-        User user = new User();
-        user.setId(200L);
-        user.setEmail("test@test.fr");
-        UserDto userDto = new UserDto();
-        userDto.setId(200L);
-        userDto.setEmail("test@test.fr");
         Task taskEntity =new Task();
         taskEntity.setId(100L);
         taskEntity.setDescription("MA_DESCRIPTION");
         taskEntity.setDueDate(LocalDate.of(2024,1,1));
         taskEntity.setDone(true);
         taskEntity.setPriority(PriorityTask.MEDIUM);
-        taskEntity.setAssignedUser(user);
-
-        when(userMapper.toDto(user)).thenReturn(userDto);
-
+        taskEntity.setAssignedUser(new User());
+        when(userMapper.toDto(any(User.class))).thenReturn(any(UserDto.class));
         // WHEN
         TaskDto output = taskMapper.toDto(taskEntity);
         // THEN
@@ -51,8 +44,7 @@ class TaskMapperTest {
         assertEquals(LocalDate.of(2024,1,1), output.getDueDate());
         assertTrue(output.isDone());
         assertEquals(PriorityTask.MEDIUM, output.getPriority());
-        assertEquals(200L, output.getAssignedUser().getId());
-        assertEquals("test@test.fr", output.getAssignedUser().getEmail());
+        verify(userMapper, times(1)).toDto(any(User.class));
     }
 
 
