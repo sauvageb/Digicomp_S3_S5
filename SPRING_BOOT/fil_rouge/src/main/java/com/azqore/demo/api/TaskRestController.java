@@ -34,8 +34,7 @@ public class TaskRestController {
     @GetMapping("/tasks")
     public List<TaskDto> getTaskList() {
         // Recuperer la liste des taches
-        List<TaskDto> taskListDto = taskService.fetchTaskList();
-        return taskListDto;
+        return taskService.fetchTaskList();
     }
 
     @PostMapping("/tasks")
