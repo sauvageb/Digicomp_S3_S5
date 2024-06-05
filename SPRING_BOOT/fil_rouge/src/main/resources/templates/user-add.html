@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout d'un utilisateur</title>
+</head>
+<body>
+
+
+<header th:insert="fragments/navbar.html :: header"></header>
+
+<h1>Ajout d'un utilisateur</h1>
+
+<form method="post" th:object="${newUser}" th:action="@{/users/add}">
+
+    <label for="firstnameInput">Prénom</label>
+    <input id="firstnameInput" type="text" th:field="*{firstName}">
+
+    <button type="submit">Ajouter</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<h1>Demo avec Angular.JS qui appelle notre API Rest</h1>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>Version recue : {{version}} </p>
+    <p>{{data}}</p>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+        </tr>
+        <tr ng-repeat="task in data">
+            <td>{{task.id}}</td>
+            <td>{{task.description}}</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    const app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+        $scope.version = "Boris";
+
+        $http.get('http://localhost:9090/api/tasks').
+        then(function(response) {
+            $scope.data = response.data;
+        });
+    });
+</script>
+
+</body>
+</html>
