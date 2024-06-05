@@ -1,5 +1,6 @@
 package com.azqore.demo.controller;
 
+import com.azqore.demo.api.dto.TaskDto;
 import com.azqore.demo.entity.PriorityTask;
 import com.azqore.demo.entity.Task;
 import com.azqore.demo.service.TaskService;
@@ -35,7 +36,7 @@ public class TaskController {
         model.addAttribute("firstnameKey", "Boris");
 
         // Recuperation des taches
-        List<Task> tasks = taskService.fetchTaskList();
+        List<TaskDto> tasks = taskService.fetchTaskList();
         // mettre les taches dans le model, en utilisant une clée
         model.addAttribute("tasklist",tasks);
 

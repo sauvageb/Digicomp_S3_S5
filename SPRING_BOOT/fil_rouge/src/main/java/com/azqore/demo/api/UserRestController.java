@@ -6,6 +6,7 @@ import com.azqore.demo.api.dto.UserDto;
 import com.azqore.demo.entity.Task;
 import com.azqore.demo.entity.User;
 import com.azqore.demo.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,13 +18,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor // Lombok constructeur (used for DI)
 public class UserRestController {
 
     private final UserService userService;
-
-    public UserRestController(UserService userService) {
-        this.userService = userService;
-    }
 
     @GetMapping(value = "/users")
     public ResponseEntity<?> fetchUsers(){
@@ -38,12 +36,16 @@ public class UserRestController {
 
             List<TaskDto> taskDtoList = new ArrayList<>();
             for(Task t : u.getTaskList()){
-                TaskDto taskDto = new TaskDto();
-                taskDto.setId(t.getId());
-                taskDto.setDescription(t.getDescription());
-                taskDto.setDueDate(t.getDueDate());
-                taskDto.setPriority(t.getPriority());
-                taskDto.setDone(t.isDone());
+
+                TaskDto taskDto = TaskDto
+                        .builder()
+                        .id(t.getId())
+                        .description(t.getDescription())
+                        .dueDate(t.getDueDate())
+                        .priority(t.getPriority())
+                        .isDone(t.isDone())
+                        .build();
+
                 taskDtoList.add(taskDto);
             }
             userDto.setTaskList(taskDtoList);
@@ -51,17 +53,12 @@ public class UserRestController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(userDtoList);
     }
-    
 
-
-
-    
+    // Mapper generic
+    // Lombok
     // Ecrire des tests unitaires
     // Lancer les tests en lignes de commandes
     // Livrer un jar
-    
-    // Lombok
-    // Spring security
     // Spring batch
-
+    // Spring security
 }
