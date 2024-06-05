@@ -54,11 +54,9 @@ public class UserRestController {
         return ResponseEntity.status(HttpStatus.OK).body(userDtoList);
     }
 
-    // Mapper generic
-    // Lombok
+
     // Ecrire des tests unitaires
-    // Lancer les tests en lignes de commandes
-    // Livrer un jar
+
     // Spring batch
     // Spring security
 }
