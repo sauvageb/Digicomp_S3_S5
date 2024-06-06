@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class TaskDto {
     private Long id;
     private String description;
@@ -18,8 +19,4 @@ public class TaskDto {
     private LocalDate dueDate;
     private boolean isDone;
     private UserDto assignedUser;
-
-    public TaskDto() {
-    }
-
 }

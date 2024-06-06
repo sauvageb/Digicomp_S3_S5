@@ -17,11 +17,6 @@ public class TasksApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TasksApplication.class, args);
-
-		// Publier sur git
-		// Hexagonal
-		// OBJECTIF FINAL : fournir une url http://localhost:9191/api/comments qui renvoie une liste de commentaires
-		// Cette API Rest sera appelée par notre deuxième projet avec un objet RestTemplate
 	}
 
 	@Override

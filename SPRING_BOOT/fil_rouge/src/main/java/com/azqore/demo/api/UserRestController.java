@@ -24,10 +24,10 @@ public class UserRestController {
     private final UserService userService;
 
     @GetMapping(value = "/users")
-    public ResponseEntity<?> fetchUsers(){
+    public ResponseEntity<?> fetchUsers() {
         List<User> userList = userService.fetchUsers();
         List<UserDto> userDtoList = new ArrayList<>();
-        for(User u : userList){
+        for (User u : userList) {
             UserDto userDto = new UserDto();
             userDto.setId(u.getId());
             userDto.setFirstName(u.getFirstName());
@@ -35,7 +35,7 @@ public class UserRestController {
             userDto.setEmail(u.getEmail());
 
             List<TaskDto> taskDtoList = new ArrayList<>();
-            for(Task t : u.getTaskList()){
+            for (Task t : u.getTaskList()) {
 
                 TaskDto taskDto = TaskDto
                         .builder()
@@ -53,10 +53,4 @@ public class UserRestController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(userDtoList);
     }
-
-
-    // Ecrire des tests unitaires
-
-    // Spring batch
-    // Spring security
 }

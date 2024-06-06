@@ -1,22 +1,15 @@
 package com.azqore.demo.api;
 
-import com.azqore.demo.api.dto.CreateTask;
-import com.azqore.demo.api.dto.ServerInfo;
-import com.azqore.demo.api.dto.TaskDto;
-import com.azqore.demo.api.dto.UserDto;
-import com.azqore.demo.api.mapper.TaskMapper;
+import com.azqore.demo.api.dto.*;
 import com.azqore.demo.entity.Task;
 import com.azqore.demo.entity.User;
 import com.azqore.demo.service.TaskService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -25,6 +18,14 @@ import java.util.stream.Collectors;
 public class TaskRestController {
 
     private final TaskService taskService;
+
+
+
+    @GetMapping("/tasks/{id}/comments")
+    public ResponseEntity<?> fetchTaskWithComments(@PathVariable("id") Long taskId){
+        TaskCommentsDTO data = taskService.fetchTaskWithComments(taskId);
+        return ResponseEntity.status(HttpStatus.OK).body(data);
+    }
 
     @GetMapping("/version")
     public ServerInfo getVersion(){
