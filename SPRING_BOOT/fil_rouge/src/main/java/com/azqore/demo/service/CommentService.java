@@ -1,6 +1,7 @@
 package com.azqore.demo.service;
 
 import com.azqore.demo.api.dto.CommentDTO;
+import com.azqore.demo.config.WebServiceConfig;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,13 +15,12 @@ import java.util.stream.Stream;
 @RequiredArgsConstructor
 public class CommentService {
 
-    private static final String url = "http://localhost:9191/api/comments";
-
+    private final WebServiceConfig webServiceConfig;
     private final RestTemplate restTemplate;
 
     public List<CommentDTO> fetchTaskComments(Long taskId) {
         List<CommentDTO> commentDTOS = new ArrayList<>();
-        CommentDTO[] comments = restTemplate.getForObject(url, CommentDTO[].class);
+        CommentDTO[] comments = restTemplate.getForObject(webServiceConfig.getCommentsUrl(), CommentDTO[].class);
         if (comments != null) {
             commentDTOS = Stream.of(comments).filter(c -> c.taskId().equals(taskId)).toList();
         }
