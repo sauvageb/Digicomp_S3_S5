@@ -17,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 @Service // Permet au service d'etre injecté (Sous la forme d'un singleton)
@@ -27,14 +28,15 @@ public class TaskService {
     private final UserMapper userMapper;
     private final TaskRepository taskRepository;
     private final RestTemplate restTemplate;
+    private final CommentService commentService;
 
-    public List<TaskDto> fetchTaskList(){
+    public List<TaskDto> fetchTaskList() {
         List<Task> tasks = (List<Task>) taskRepository.findAll();
         // VERSION 1 : stream
         List<TaskDto> dtos = tasks.stream().map(task -> taskMapper.toDto(task)).toList();
         // VERSION 2 : java 7
         dtos = new ArrayList<>();
-        for (Task t : tasks){
+        for (Task t : tasks) {
             TaskDto taskDto = taskMapper.toDto(t);
             taskDto.setAssignedUser(userMapper.toDto(t.getAssignedUser()));
             dtos.add(taskDto);
@@ -42,7 +44,7 @@ public class TaskService {
         return dtos;
     }
 
-    public void addTask(Task taskToCreate){
+    public void addTask(Task taskToCreate) {
         taskRepository.save(taskToCreate);
     }
 
@@ -52,36 +54,32 @@ public class TaskService {
 
     public void toggleStatus(Long idTask) {
         Optional<Task> taskOpt = taskRepository.findById(idTask);
-        if(taskOpt.isPresent()){
+        if (taskOpt.isPresent()) {
             Task task = taskOpt.get();
             task.setDone(!task.isDone());
             taskRepository.save(task);
         }
     }
 
-    public TaskCommentsDTO fetchTaskWithComments(Long taskId) {
-            Optional<Task> taskOpt = taskRepository.findById(taskId);
+    public TaskCommentsDTO fetchTaskWithComments(Long taskId)  {
+        Optional<Task> taskOpt = taskRepository.findById(taskId);
 
-            if(taskOpt.isPresent()) {
-               TaskDto taskDto = taskMapper.toDto(taskOpt.get());
-
-                String url = "http://localhost:9191/api/comments";
-                CommentDTO[] comments = restTemplate.getForObject(url, CommentDTO[].class);
-                List<CommentDTO> commentDTOS = new ArrayList<>();
-                if(comments != null){
-                   commentDTOS = Stream.of(comments).filter(c -> c.taskId().equals(taskId)).toList();
-                }
-
-                TaskCommentsDTO dto = new TaskCommentsDTO();
-                dto.setId(taskDto.getId());
-                dto.setDueDate(taskDto.getDueDate());
-                dto.setDescription(taskDto.getDescription());
-                dto.setPriority(taskDto.getPriority());
-                dto.setAssignedUser(taskDto.getAssignedUser());
-                dto.setComments(commentDTOS);
-                return dto;
-            }
+        if (taskOpt.isEmpty()) {
             throw new RuntimeException("Exception while fetching comments");
+        }
+        Task task = taskOpt.get();
+
+        TaskDto taskDto = taskMapper.toDto(task);
+        List<CommentDTO> commentDTOS = commentService.fetchTaskComments(taskId);
+
+        TaskCommentsDTO dto = new TaskCommentsDTO();
+        dto.setId(taskDto.getId());
+        dto.setDueDate(taskDto.getDueDate());
+        dto.setDescription(taskDto.getDescription());
+        dto.setPriority(taskDto.getPriority());
+        dto.setAssignedUser(taskDto.getAssignedUser());
+        dto.setComments(commentDTOS);
+        return dto;
     }
 
 }
