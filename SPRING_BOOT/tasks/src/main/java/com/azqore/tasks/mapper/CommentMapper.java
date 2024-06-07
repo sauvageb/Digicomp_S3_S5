@@ -15,6 +15,12 @@ public class CommentMapper implements Mapper<Comment, CommentDto> {
 
     @Override
     public Comment fromDto(CommentDto d) {
-        return null;
+        return Comment
+                .builder()
+                .id(d.id())
+                .message(d.message())
+                .taskId(d.taskId())
+                .createdAt(d.createdAt())
+                .build();
     }
 }

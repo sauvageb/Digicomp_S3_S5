@@ -1,5 +1,8 @@
 package com.azqore.tasks.dto;
 
+import lombok.Builder;
+
 import java.time.LocalDateTime;
 
-public record CommentDto (Long id, String message, LocalDateTime createdAt,Long taskId) {}
+@Builder
+public record CommentDto (Long id, String message, LocalDateTime createdAt, Long taskId) {}

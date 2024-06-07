@@ -17,13 +17,15 @@ public class CommentService {
     private final CommentMapper commentMapper;
 
     public List<CommentDto> fetchComments(){
-
         List<Comment> commentList = (List<Comment>) commentRepository.findAll();
-
         return commentList
                 .stream()
                 .map(c -> commentMapper.toDto(c))
                 .toList();
     }
 
+    public void addComment(CommentDto data) {
+        Comment comment = commentMapper.fromDto(data);
+        commentRepository.save(comment);
+    }
 }
